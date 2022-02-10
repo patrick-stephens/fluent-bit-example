@@ -1,4 +1,4 @@
-name: Fluent linter 
+name: examples/bad-set linting
 
 on:
     push:
@@ -10,10 +10,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - id: running_linter
         uses: calyptia/fluent-linter-action@main
         with:
           CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
           CONFIG_LOCATION_GLOB: 'examples/bad-set/fluent-bit.conf'
-
