@@ -1,0 +1,28 @@
+name: Fluent linter 
+
+on:
+  workflow_dispatch:
+    inputs:
+      glob:
+        description: The files to lint.
+        type: string
+        required: true
+        default: 'examples/**/fluent-bit*.conf'
+      ref:
+        description: The git commit SHA, tag or branch to checkout for linting.
+        type: string
+        required: true
+        default: main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.inputs.ref }}
+          
+      - uses: calyptia/fluent-linter-action@main
+        with:
+          CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
+          CONFIG_LOCATION_GLOB: ${{ github.event.inputs.glob }}
