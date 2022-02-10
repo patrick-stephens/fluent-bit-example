@@ -1,4 +1,4 @@
-name: examples/bad-set linter
+name: examples/missing-parsers linter
 
 on:
   push:

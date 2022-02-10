@@ -1,4 +1,4 @@
-name: examples/bad-set linter
+name: examples/include-properties linter
 
 on:
   push:
