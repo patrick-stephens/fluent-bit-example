@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: calyptia/fluent-linter-action@main
+      - uses: calyptia/fluent-linter-action@v0.0.12
         with:
           CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
           CONFIG_LOCATION_GLOB: 'demo/bad-property/fluent-bit.conf'
