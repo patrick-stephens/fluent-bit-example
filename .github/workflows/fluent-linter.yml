@@ -7,7 +7,7 @@ on:
         description: The files to lint.
         type: string
         required: true
-        default: 'examples/missing-include/fluent-bit.conf'
+        default: 'examples/missing-include/fluent-bit-simple.conf'
       ref:
         description: The git commit SHA, tag or branch to checkout for linting.
         type: string
