@@ -1,0 +1,17 @@
+name: examples/bad-set linter
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: calyptia/fluent-linter-action@main
+        with:
+          CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
+          CONFIG_LOCATION_GLOB: 'examples/demo/duplicate-include/fluent-bit.conf'
