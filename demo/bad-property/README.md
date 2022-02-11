@@ -1,0 +1,22 @@
+# Invalid properties
+
+Example of using invalid properties in a section.
+
+```
+$ docker run --rm -it -v $PWD/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf fluent/fluent-bit:1.8.12
+Fluent Bit v1.8.12
+* Copyright (C) 2019-2021 The Fluent Bit Authors
+* Copyright (C) 2015-2018 Treasure Data
+* Fluent Bit is a CNCF sub-project under the umbrella of Fluentd
+* https://fluentbit.io
+
+[2022/02/11 16:35:10] [ info] [engine] started (pid=1)
+[2022/02/11 16:35:10] [ info] [storage] version=1.1.5, initializing...
+[2022/02/11 16:35:10] [ info] [storage] in-memory
+[2022/02/11 16:35:10] [ info] [storage] normal synchronization mode, checksum disabled, max_chunks_up=128
+[2022/02/11 16:35:10] [ info] [cmetrics] version=0.2.2
+[2022/02/11 16:35:10] [error] [config] dummy: unknown configuration property 'this-is-not-real'. The following properties are allowed: samples, dummy, rate, start_time_sec, and start_time_nsec.
+[2022/02/11 16:35:10] [ help] try the command: /fluent-bit/bin/fluent-bit -i dummy -h
+
+[2022/02/11 16:35:10] [error] [lib] backend failed
+```
