@@ -1,4 +1,4 @@
-name: edemo - missing includes linter
+name: demo - missing includes linter
 
 on:
   push:
@@ -14,4 +14,4 @@ jobs:
       - uses: calyptia/fluent-linter-action@main
         with:
           CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
-          CONFIG_LOCATION_GLOB: 'examples/demo/missing-include/fluent-bit.conf'
+          CONFIG_LOCATION_GLOB: 'demo/missing-include/fluent-bit.conf'

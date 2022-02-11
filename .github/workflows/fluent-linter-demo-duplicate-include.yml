@@ -14,4 +14,4 @@ jobs:
       - uses: calyptia/fluent-linter-action@main
         with:
           CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
-          CONFIG_LOCATION_GLOB: 'examples/demo/duplicate-include/fluent-bit.conf'
+          CONFIG_LOCATION_GLOB: 'demo/duplicate-include/fluent-bit.conf'
