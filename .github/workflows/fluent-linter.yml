@@ -22,7 +22,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.ref }}
 
-      - uses: calyptia/fluent-linter-action@gg/adding-parsing-errors-as-annotations
+      - uses: calyptia/fluent-linter-action@main
         with:
           CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
           CONFIG_LOCATION_GLOB: ${{ github.event.inputs.glob }}

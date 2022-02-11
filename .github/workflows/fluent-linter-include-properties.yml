@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: calyptia/fluent-linter-action@gg/adding-parsing-errors-as-annotations
+      - uses: calyptia/fluent-linter-action@main
         with:
           CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
           CONFIG_LOCATION_GLOB: 'examples/include-properties/fluent-bit*.conf'
