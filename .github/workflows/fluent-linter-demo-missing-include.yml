@@ -1,4 +1,4 @@
-name: examples/bad-set linter
+name: edemo - missing includes linter
 
 on:
   push:

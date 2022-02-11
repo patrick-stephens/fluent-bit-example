@@ -1,4 +1,4 @@
-name: examples/bad-set linter
+name: demo - invalid properties linter
 
 on:
   push:

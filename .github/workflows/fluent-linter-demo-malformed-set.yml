@@ -1,4 +1,4 @@
-name: examples/bad-set linter
+name: demo - malformed set linter
 
 on:
   push:
