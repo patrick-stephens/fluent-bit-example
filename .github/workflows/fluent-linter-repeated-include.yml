@@ -1,4 +1,4 @@
-name: Fluent linter 
+name: Fluent linter / repeated include
 
 on:
     push:
