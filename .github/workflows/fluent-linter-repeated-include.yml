@@ -1,4 +1,4 @@
-name: examples/bad-set linting
+name: Fluent linter / repeated include
 
 on:
     push:
@@ -10,9 +10,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
       - id: running_linter
         uses: calyptia/fluent-linter-action@gg/adding-parsing-errors-as-annotations
         with:
           CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
-          CONFIG_LOCATION_GLOB: 'examples/bad-set/fluent-bit.conf'
+          CONFIG_LOCATION_GLOB: 'examples/repeated-include/entry-point.conf'

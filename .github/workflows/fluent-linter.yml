@@ -1,18 +1,7 @@
-name: Fluent linter 
+name: Fluent linter  / Testing Includes
 
 on:
-  workflow_dispatch:
-    inputs:
-      glob:
-        description: The files to lint.
-        type: string
-        required: true
-        default: 'examples/**/fluent-bit*.conf'
-      ref:
-        description: The git commit SHA, tag or branch to checkout for linting.
-        type: string
-        required: true
-        default: main
+  push:
 
 jobs:
   lint:
@@ -22,7 +11,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.ref }}
           
-      - uses: calyptia/fluent-linter-action@main
+      - uses: calyptia/fluent-linter-action@gg/adding-parsing-errors-as-annotations
         with:
           CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
-          CONFIG_LOCATION_GLOB: ${{ github.event.inputs.glob }}
+          CONFIG_LOCATION_GLOB: 'examples/missing-include/fluent-bit-simple.conf'
